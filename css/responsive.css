@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@media screen and (max-width: 1680px) {
+  section.contact .contact-content {
+    width: 100%;
+  }
+
+}
+@media screen and (max-width: 1640px) {
+  section.contact .contact-content {
+    padding-left: 2vw;
+  }
+  section.contact .contact-content::before {
+    bottom: 0;
+    -webkit-mask-position: left bottom;
+    -webkit-mask-size: cover;
+  }
+}
