@@ -9,23 +9,14 @@ $(function () {
     $("section.hero").addClass("load");
   })
 
-  let isSubOpened = false;
-
   $("#header nav .depth1 > li > a").mouseenter(function () {
-    if (isSubOpened) {
-      $("#header nav").addClass("firstopen");
-    } else {
-      $("#header nav").removeClass("firstopen");
-    }
-    $("#header nav .depth2.open").removeClass("open");
+    $("#header nav .depth2").removeClass("open");
     $("#header").addClass("hover");
     $(this).parent().find(".depth2").addClass("open");
-    isSubOpened = false;
   })
   $("#header").mouseleave(function () {
     $("#header").removeClass("hover");
     $("#header nav .depth2.open").removeClass("open");
-    isSubOpened = true;
   })
 
   $(".header-full-btn").click(function () {
